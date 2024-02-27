@@ -60,7 +60,13 @@
       <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-pmd-plugin</artifactId>
-          <version>3.15.0</version> <!-- Use the latest version -->
+          <version>${pmd.version}</version> <!-- Use the latest version -->
+          <configuration>
+              <linkXRef>true</linkXRef>
+              <sourceEncoding>UTF-8</sourceEncoding>
+              <minimumTokens>100</minimumTokens>
+              <targetJdk>1.7</targetJdk>
+          </configuration>
           <executions>
               <execution>
                   <phase>verify</phase> <!-- Configure the phase where PMD should run -->
